@@ -2,6 +2,9 @@
 
 The App is a React Website that will request information to an Node/Express server to show a list of items.
 
+<p align="center">
+  <img src="preview.png" alt="React/Redux/NextJS and Express Project screenshot"/>
+</p>
 
 ## FrontEnd
 
