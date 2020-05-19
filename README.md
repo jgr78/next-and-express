@@ -30,14 +30,14 @@ Other packages used:
 
 ## Folders
 
-__tests__: Unit test
-components:  React components used in the FE
-constants:   Configuration files
-cypress/integration:  e2e tests
-pages:  pages folder
-public: static files folder
-redux: store, reducers & actions
-server: Express node server
+*  __tests__: Unit test
+*  components:  React components used in the FE
+*  constants:   Configuration files
+*  cypress/integration:  e2e tests
+*  pages:  pages folder
+*  public: static files folder
+*  redux: store, reducers & actions
+*  server: Express node server
 
 ## Main commands
 
