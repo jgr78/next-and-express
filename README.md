@@ -30,6 +30,7 @@ Other packages used:
 * We will use NextJS as a boiler plate for React
 * The server will response with a 3 seconds delay (to give time to the FE to show a Spinner)
 * Due to the images are not accesible, the FE will show a default image if is needed
+* If in a condition, the snippet parameter is not available, the CTA "Will not be visible"
 
 ## Folders
 
