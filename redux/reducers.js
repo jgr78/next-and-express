@@ -1,13 +1,10 @@
-import { combineReducers } from 'redux'
 import * as types from '../constants/types'
-
 
 // INITIAL CONDITIONS STATE
 const initialConditionsState = {
   conditions: [],
   error: false,
 }
-
 
 // CONDITIONS REDUCER
 const conditionsReducer = (state = initialConditionsState, { type, conditions }) => {
@@ -18,7 +15,6 @@ const conditionsReducer = (state = initialConditionsState, { type, conditions })
       return { error: true }
     case types.RESET:
       return { error: false }
-
     default:
       return state
   }
