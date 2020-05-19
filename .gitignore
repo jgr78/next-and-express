@@ -1,0 +1,16 @@
+# next.js build output
+.next
+.git
+
+# dependencies
+node_modules
+server/node_modules
+
+# vuepress build output
+.vuepress/dist
+
+# extra files
+.DS_Store
+
+# React export folder
+out/

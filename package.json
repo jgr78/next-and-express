@@ -3,14 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage --colors",
     "dev": "next",
     "build": "next build",
-    "start:noconcurrently": "next start",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node server/index.js",
-    "client": "ENV_PARAMS=dev node server.js",
+    "client": "node server.js",
     "cypress": "cypress open"
   },
   "dependencies": {

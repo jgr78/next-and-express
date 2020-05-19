@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+
+##################################
+#  Setup Node container
+##################################
+    server:
+        build:
+            context: .
+            dockerfile: ./server/Dockerfile
+        expose:
+            - ${APP_SERVER_PORT}
+        environment:
+            API_HOST: ${API_HOST}
+            APP_SERVER_PORT: ${APP_SERVER_PORT}
+        ports:
+            - "${APP_SERVER_PORT}:${APP_SERVER_PORT}"
+        volumes:
+            - ./server:/usr/src/server
+        command: bash -c "npm install && npm run server"
+##################################
+#  Setup Next container
+##################################
+    client:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        environment:
+            - REACT_APP_PORT= ${REACT_APP_PORT}
+        expose:
+            - ${REACT_APP_PORT}
+        ports:
+            - ${REACT_APP_PORT}:${REACT_APP_PORT}
+        volumes:
+            - ./:/usr/src/app
+        links:
+            - server
+        command: bash -c "npm install && npm run client"
+
