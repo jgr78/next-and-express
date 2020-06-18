@@ -7,7 +7,10 @@ const initialConditionsState = {
 }
 
 // CONDITIONS REDUCER
-const conditionsReducer = (state = initialConditionsState, { type, conditions }) => {
+const conditionsReducer = (
+  state = initialConditionsState,
+  { type, conditions }
+) => {
   switch (type) {
     case types.ADD_CONDITIONS:
       return { conditions }
@@ -19,6 +22,5 @@ const conditionsReducer = (state = initialConditionsState, { type, conditions })
       return state
   }
 }
-
 
 export default conditionsReducer

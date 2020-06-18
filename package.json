@@ -3,14 +3,21 @@
   "version": "1.0.0",
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors",
     "dev": "next",
     "build": "next build",
+    "start:prod": "next start",
+    "prod": "next export",
+    "export": "next build && next export",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node server/index.js",
     "client": "node server.js",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "lint": "eslint ./components/** ./pages/** -c .eslintrc.json --fix --ext js,jsx"
   },
   "dependencies": {
+    "@sentry/browser": "^5.17.0",
     "concurrently": "^5.2.0",
     "express": "^4.17.1",
     "next": "latest",
@@ -21,16 +28,23 @@
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.1"
   },
   "license": "ISC",
   "devDependencies": {
-    "@testing-library/react-hooks": "^3.2.1",
-    "cypress": "^4.5.0",
+    "@testing-library/react-hooks": "^3.3.0",
+    "babel-eslint": "^10.1.0",
+    "cypress": "^4.8.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
-    "enzyme-to-json": "^3.4.4",
+    "enzyme-to-json": "^3.5.0",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
     "jest": "^26.0.1",
+    "prettier": "^2.0.5",
     "redux-mock-store": "^1.5.4"
   }
 }
