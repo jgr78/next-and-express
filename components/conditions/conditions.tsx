@@ -8,9 +8,10 @@ type Props = {
 
 function Conditions({ data }: Props) {
   if (!data || !data.length) return <></>
-  return data.map((item, index) => (
+  const wrapper = data.map((item, index) => (
     <Card element={item} key={`conditions_${index}`} />
   ))
+  return <>{wrapper}</>
 }
 
 Conditions.propTypes = {

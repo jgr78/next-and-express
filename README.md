@@ -1,6 +1,6 @@
-## React/Redux Thunk and Next.js integrated with Express
+## React, TypeScript, Redux Thunk and Next.js integrated with Express (Unit test + e2e testing)
 
-The App is a React Website that will request information to an Node/Express server to show a list of items.
+The App is a React TypeScript Next Website that request information to an Node/Express server to show a list of items.
 
 <p align="center">
   <img src="preview.png" alt="React/Redux/NextJS and Express Project screenshot"/>
@@ -11,6 +11,7 @@ The App is a React Website that will request information to an Node/Express serv
 * React
 * Redux
 * Next
+* TypeScript
 
 Other packages used:
 

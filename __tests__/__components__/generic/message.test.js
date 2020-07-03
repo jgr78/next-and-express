@@ -7,7 +7,7 @@ describe(`Message component`, () => {
     const wrapper = shallow(<Message text={exampleText} />);
 
     it(`Text renders correctly`, () => {
-        expect(wrapper.text()).toEqual(exampleText);
+        expect(wrapper.text().trim()).toEqual(exampleText);
     });
 });
 

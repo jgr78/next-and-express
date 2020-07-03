@@ -40,7 +40,7 @@ describe(`Index page, error message`, () => {
 
     it(`renders error message`, () => {
         expect(indexWithError.find(Message)).toHaveLength(1);
-        expect(indexWithError.find(Message).text()).toEqual(ERROR_MESSAGE);
+        expect(indexWithError.find(Message).text().trim()).toEqual(ERROR_MESSAGE);
     });
 });
 
@@ -65,7 +65,7 @@ describe(`Index page, result list`, () => {
     it(`renders conditions list`, () => {
         expect(indexWithValues.find(Card)).toHaveLength(1);
         expect(indexWithValues.find('img')).toHaveLength(1);
-        expect(indexWithValues.find('.snippet .close').text()).toEqual('xxx');
+        expect(indexWithValues.find('.snippet .close').text().trim()).toEqual('xxx');
     });
 });
 
