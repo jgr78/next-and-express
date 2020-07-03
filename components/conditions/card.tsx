@@ -1,11 +1,16 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types"
 import styled from 'styled-components'
 import { DEFAULT_IMG } from '../../constants/properties'
 import { colors } from '../../constants/styles'
 import { CLOSE, FIND_OUT_MORE } from '../../constants/content'
+import { Element } from '../../interfaces'
 
-function Card({ element }) {
+type Props = {
+  element?: Element
+}
+
+function Card({ element }: Props) {
   if (!element) return <></>
   const [open, openCard] = useState(false)
 

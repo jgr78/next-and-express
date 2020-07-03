@@ -1,10 +1,15 @@
+import { ReactNode } from 'react'
 import { createGlobalStyle } from 'styled-components'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Head from 'next/head'
 import { devices, fonts, colors } from '../../constants/styles'
 
-const MainLayout = ({ children, title }) => {
+type Props = {
+  children: ReactNode,
+  title?: String,
+}
+const MainLayout = ({ children, title }: Props) => {
   return (
     <div>
       <Head>

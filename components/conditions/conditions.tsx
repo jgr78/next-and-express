@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types'
 import Card from './card'
+import { Element } from '../../interfaces'
 
-function Conditions({ data }) {
+type Props = {
+  data?: Element[]
+}
+
+function Conditions({ data }: Props) {
   if (!data || !data.length) return <></>
   return data.map((item, index) => (
     <Card element={item} key={`conditions_${index}`} />

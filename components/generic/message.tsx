@@ -1,11 +1,11 @@
 // Generic message component
-import PropTypes from 'prop-types'
+import PropTypes, { InferProps } from "prop-types"
 import styled from 'styled-components'
 import { colors } from '../../constants/styles'
 
-export default function Message({ text }) {
+export default function Message({ text }: InferProps<typeof Message.propTypes>) {
   if (!text) return
-  return <Div>{text}</Div>
+  return <Div> {text} </ Div>
 }
 
 const Div = styled.div`
